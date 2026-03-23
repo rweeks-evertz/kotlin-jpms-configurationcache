@@ -1,3 +1,5 @@
+val JAVA_VERSION = 24
+
 plugins {
     id("application")
     id("java")
@@ -25,7 +27,7 @@ tasks.test {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(JAVA_VERSION))
     }
 }
 
@@ -38,7 +40,7 @@ kotlin {
         allWarningsAsErrors = true
     }
     jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(JAVA_VERSION))
     }
 }
 
